@@ -1,0 +1,62 @@
+﻿
+@model List<MVCCopilotDemo.Models.Domain.Employee>
+@{
+}
+
+<h1>Employees  </h1>
+<!-- create a for loop that display all the employees in a table -->   
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Employee Id
+            </th>
+            <th>
+                Employee Name
+            </th>
+            <th>
+                Employee Email
+            </th>
+            <th>
+                Employee Salary
+            </th>
+            <th>
+                Date of Birth
+            </th>
+            <th>
+                Department
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>
+                    @employee.EmployeeId
+                </td>
+                <td>
+                    @employee.EmployeeName
+                </td>
+                <td>
+                    @employee.EmployeeEmail
+                </td>
+                <td>
+                    @employee.EmployeeSalary
+                </td>
+                <td>
+                    @employee.DateOfBirth
+                </td>
+                <td>
+                    @employee.Department
+                </td>
+                <td>
+                    <a href="Employees/View/@employee.EmployeeId">View</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
